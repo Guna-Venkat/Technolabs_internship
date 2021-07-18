@@ -1,15 +1,20 @@
 # TECHNOCOLABS  DATA ANALYSIS  INTERNSHIP PROJECT REPORT #  
 
-_**TITLE:**_   
+_**TITLE:**_ 
+  
 Predicting Loan Repayment Ability with Grade Using Machine Learning and Deep Learning.  
 _**AIM:**_  
+  
 The principle focus of our project is to perform data analysis and train a model using the most popular Machine Learning algorithm – Regularized Logistic Regression, Random Forest and Neural Networks in order to analyse the historical data that is present regarding the Loan Repayment.   
 _**ABSTRACT:**_  
+  
 Evaluating and predicting the repayment ability of the loaners is important for the banks to minimize the risk of loan payment default. By this reason, there is a system created by the banks to process the loan request based on the loaners’ status, such as employment status, credit history, etc.. However, the current existing evaluation system might not be appropriate to evaluate some loaners repayment ability, such as students or people without credit histories. In order to properly assess the repayment ability of all groups of people, we trained various machine learning models on a Lending club dataset and evaluated the importance of all the features used. Then, based on the importance score of the features, we analyze and select the most identifiable features to predict the repayment ability of the loaner.  
 _**INTRODUCTION:**_  
+  
 Due to insufficient credit histories, many people are struggling to get loans from trustworthy sources, such as banks. These people are normally students or unemployed adults, who might not have enough knowledge to justify the credibility of the unidentified lenders. The untrustworthy lenders can take advantage of these borrowers by taking high interest rates or including hidden terms in the contract. Instead of evaluating the borrower based on their credit score, there are many other alternative ways to measure or predict their repayment abilities. For example, employment can be a big factor to affect the person’s repayment ability since an employed adult has more stable incomes and cash flow. Some other factors, such as real estates, marriage status and the city of residence, might also be useful in the study of the repayment ability. Therefore, in our project, we are planning to use machine learning algorithms to study the correlations between borrower status and their repayment ability.
 We found the dataset from Lending club, to be used in this project. This open dataset contains 100K anonymous client’s with 152 unique features. By studying the correlation between these features and repayment ability of the clients, our algorithm can help lenders evaluate borrowers from more dimensions and can also help borrowers, especially those who do not have sufficient credit histories, to find credible loaner, leading to a win-win situation.  
 _**OVERVIEW:** _  
+  
  _Data Segmentation and Data Cleaning_  
   - Exploratory Data Analysis using python’s data visualisation libraries.  
   - Training the model based on the historical data available.  
@@ -21,50 +26,50 @@ For this project, we have taken Bank loan dataset from Lending Club. This datase
 | accepted_2017_to_2018q4.csv      |    Information about loan accepted when they submit the application.    | 152   |
 | rejected_2017_to_2018q4.csv   |    Information about loan rejected when they submit the application.     | 9      |  
 
-**DATA SEGMENTATION AND DATA CLEANING:**  
--	In this project, we have prepared a processed dataset by and collected the clear-cut data available online.  
--	Using pandas data frame, we have calculated the mean of every column.  
--	We have dropped the columns that containing more than 70% of missing values.  
--	By using the fillna we have filled all the cells with mean values for numeric data.  
--	While doing so, we have not included the countries having a zero value in their cells.  
--	We have manually replaced the zeros in a column with the mean of the column.  
--	The original format of the file was XLSX. We have converted into CSV format and proceeded.  
+**DATA SEGMENTATION AND DATA CLEANING:**   
+ -	In this project, we have prepared a processed dataset by and collected the clear-cut data available online.  
+ -	Using pandas data frame, we have calculated the mean of every column.  
+ -	We have dropped the columns that containing more than 70% of missing values.  
+ -	By using the fillna we have filled all the cells with mean values for numeric data.  
+ -	While doing so, we have not included the countries having a zero value in their cells.  
+ -	We have manually replaced the zeros in a column with the mean of the column.  
+ -	The original format of the file was XLSX. We have converted into CSV format and proceeded.  
 **EXPLORATORY DATA ANALYSYIS:**  
 We used Jupyter notebook and Python libraries (Matplotilb, Pandas, Seaborn) for data visualization.  
 We first began to look at our data to better understand our demographics. We started by taking a look at the length of employment for our customers. We also explored the distribution of the loan amounts and see when did the loan amount issued increased significantly and were able to draw the following conclusion:  
--	Most of the loans issued were in the range of 10,000 to 20,000 USD.  
--	The year of 2015 was the year were most loans were issued.  
--	Loans were issued in an incremental manner. (Possible due to a recovery in the U.S economy)  
--	The loans applied by potential borrowers, the amount issued to the borrowers and the amount funded by investors are similarly distributed, meaning that it is most likely that qualified borrowers are going to get the loan they had applied for.  
+ -	Most of the loans issued were in the range of 10,000 to 20,000 USD.  
+ -	The year of 2015 was the year were most loans were issued.  
+ -	Loans were issued in an incremental manner. (Possible due to a recovery in the U.S economy)  
+ -	The loans applied by potential borrowers, the amount issued to the borrowers and the amount funded by investors are similarly distributed, meaning that it is most likely that qualified borrowers are going to get the loan they had applied for.  
 Next, we took a look at what is the amount of bad loans Lending Club has declared so far keeping in mind that there were still loans that were at a risk of defaulting in the future. Also, the amount of bad loans could increment as the days pass by, since we still had a great amount of current loans. Average annual income was an important key metric for finding possible opportunities of investments in a specific region.  
 __The conclusion that we drew from this were:__  
--	Currently, bad loans consist 7.60% of total loans but remember that we still have current loans which have the risk of becoming bad loans. (So this percentage is subjected to possible changes.)  
--	The NorthEast region seemed to be the most attractive in term of funding loans to borrowers.  
--	The SouthWest and West regions have experienced a slight increase in the "median income" in the past years.  
--	Average interest rates have declined since 2012 but this might explain the increase in the volume of loans.  
--	Employment Length tends to be greater in the regions of the SouthWest and West  
--	Clients located in the regions of NorthEast and MidWest have not experienced a drastic increase in debt-to-income(dti) as compared to the other regions.  
--	Fully Paid loans tend to be smaller. This could be due to the age of the loans  
--	Default has the highest count among other loan status.  
--	In Grace Period and Late(16~30 days) have the highest loan amount and mean.  
+ -	Currently, bad loans consist 7.60% of total loans but remember that we still have current loans which have the risk of becoming bad loans. (So this percentage is subjected to possible changes.)  
+ -	The NorthEast region seemed to be the most attractive in term of funding loans to borrowers.  
+ -	The SouthWest and West regions have experienced a slight increase in the "median income" in the past years.  
+ -	Average interest rates have declined since 2012 but this might explain the increase in the volume of loans.  
+ -	Employment Length tends to be greater in the regions of the SouthWest and West  
+ -	Clients located in the regions of NorthEast and MidWest have not experienced a drastic increase in debt-to-income(dti) as compared to the other regions.  
+ -	Fully Paid loans tend to be smaller. This could be due to the age of the loans  
+ -	Default has the highest count among other loan status.  
+ -	In Grace Period and Late(16~30 days) have the highest loan amount and mean.  
 The next question we wanted to answer was "What kind of loans are being issued?". We decided to approach this by the grade that LendingClub assigns to the loan. The Grade is a value from A to G that is a culmination of LendingClub’s own analysis on the ability for the customer to repay the grade and the insights that we drew from this were:  
--	Interest rate varied wildly, reaching nearly 30% for high-risk loans  
--	Grade A has the lowest interest rate around 7%  
--	Grade G has the highest interest rate above 25%  
+ -	Interest rate varied wildly, reaching nearly 30% for high-risk loans  
+ -	Grade A has the lowest interest rate around 7%  
+ -	Grade G has the highest interest rate above 25%  
 In the next part we analyzed loans issued by region in order to see region patters that will allow us to understand which region gives Lending Club.  
 __Summary:__  
--	South-East , West and North-East regions had the highest amount lof loans issued.  
--	West and South-West had a rapid increase in debt-to-income starting in 2012.  
--	West and South-West had a rapid decrease in interest rates (This might explain the increase in debt to income)  
+ -	South-East , West and North-East regions had the highest amount lof loans issued.  
+ -	West and South-West had a rapid increase in debt-to-income starting in 2012.  
+ -	West and South-West had a rapid decrease in interest rates (This might explain the increase in debt to income)  
 Deeper Look into Bad Loans:  
 We looked at the number of loans that were classified as bad loans for each region by its loan status. We also had a closer look at the operative side of business by state. This gave us a clearer idea in which state we have a higher operating activity We focused on three key metrics: Loans issued by state (Total Sum), Average interest rates charged to customers and average annual income of all customers by state. The purpose of this analysis was to see states that give high returns at a descent risk.  
 __And we concluded as follows:__  
--	The regions of the West and South-East had a higher percentage in most of the "bad" loan statuses.  
--	The North-East region had a higher percentage in Grace Period and Does not meet Credit Policy loan status. However, both of these are not considered as bad as default for instance.  
--	Based on this small and brief summary we can conclude that the West and South-East regions have the most undesirable loan status, but just by a slightly higher percentage compared to the North-East region.  
--	California, Texas, New York and Florida were the states in which the highest amount of loans were issued.  
--	Interesting enough, all four states had an approximate interest rate of 13% which is at the same level of the average interest rate for all states (13.24%)  
--	California, Texas and New York were all above the average annual income (with the exclusion of Florida), this gave possible indication why most loans were issued in these states.  
+ -	The regions of the West and South-East had a higher percentage in most of the "bad" loan statuses.  
+ -	The North-East region had a higher percentage in Grace Period and Does not meet Credit Policy loan status. However, both of these are not considered as bad as default for instance.  
+ -	Based on this small and brief summary we can conclude that the West and South-East regions have the most undesirable loan status, but just by a slightly higher percentage compared to the North-East region.  
+ -	California, Texas, New York and Florida were the states in which the highest amount of loans were issued.  
+ -	Interesting enough, all four states had an approximate interest rate of 13% which is at the same level of the average interest rate for all states (13.24%)  
+ -	California, Texas and New York were all above the average annual income (with the exclusion of Florida), this gave possible indication why most loans were issued in these states.  
 **DATA MODELLING :**  
 __Team-B’s :__  After further analysis and cleaning of data and filling missing values we came down to 2011813 rows × 91 columns of our data and carefully observing the relevance, we out of that selected 33 features  and one target value as listed below:  
 - 1.	'funded_amnt_inv',  
