@@ -1,4 +1,4 @@
-# TECHNOCOLABS  DATA ANALYSIS  INTERNSHIP PROJECT REPORT
+# TECHNOCOLABS  DATA ANALYSIS  INTERNSHIP PROJECT REPORT #
 
 **TITLE:** 
 Predicting Loan Repayment Ability with Grade Using Machine Learning and Deep Learning.
@@ -15,11 +15,12 @@ We found the dataset from Lending club, to be used in this project. This open da
 	- Training the model based on the historical data available.
 **DATASET OVERVIEW:**
 For this project, we have taken Bank loan dataset from Lending Club. This dataset gives us the details about the loans that are either Fully Paid or Charged off by the customer. According to the dataset, there are 152 independent variables describing about a particular Loan Application. We analyzed Lending Club’s dataset of roughly 100k loans between 2007–18. We chose to only analyze loans that were paid off in full, charged off or defaulted in this case. Also the characteristics at time of application and loan characteristics at time of issuance.
-          | File Name	      |       Description	   |   #  Of  Features |
------------------------------------------------------------------------------------
+
+| File Name	      |       Description	   |   #  Of  Features |
+---------------------------------------------------------------------------------------------------------------
 | accepted_2007_to_2018q4.csv	| Information about loan accepted when they submit the application.	| 152 | 
------------------------------------------------------------------------------------
-| rejected_2007_to_2018q4.csv |	Information about loan rejected when they submit the application.	| 9 |
+--------------------------------------------------------------------------------------------------------------
+| rejected_2007_to_2018q4.csv   |	Information about loan rejected when they submit the application. | 9 |
 
 **DATA SEGMENTATION AND DATA CLEANING:**
 -	In this project, we have prepared a processed dataset by and collected the clear-cut data available online.
