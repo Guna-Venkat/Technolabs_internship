@@ -17,7 +17,7 @@ _**INTRODUCTION:**_
 Due to insufficient credit histories, many people are struggling to get loans from trustworthy sources, such as banks. These people are normally students or unemployed adults, who might not have enough knowledge to justify the credibility of the unidentified lenders. The untrustworthy lenders can take advantage of these borrowers by taking high interest rates or including hidden terms in the contract. Instead of evaluating the borrower based on their credit score, there are many other alternative ways to measure or predict their repayment abilities. For example, employment can be a big factor to affect the person’s repayment ability since an employed adult has more stable incomes and cash flow. Some other factors, such as real estates, marriage status and the city of residence, might also be useful in the study of the repayment ability. Therefore, in our project, we are planning to use machine learning algorithms to study the correlations between borrower status and their repayment ability.
 We found the dataset from Lending club, to be used in this project. This open dataset contains 100K anonymous client’s with 152 unique features. By studying the correlation between these features and repayment ability of the clients, our algorithm can help lenders evaluate borrowers from more dimensions and can also help borrowers, especially those who do not have sufficient credit histories, to find credible loaner, leading to a win-win situation.  
   
-_**OVERVIEW:** _  
+_**OVERVIEW:**_  
   
  _Data Segmentation and Data Cleaning_  
   - Exploratory Data Analysis using python’s data visualisation libraries.  
